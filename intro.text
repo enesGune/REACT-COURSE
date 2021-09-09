@@ -2,3 +2,186 @@
 
 
 ---1 . React FİRST
+--- js variable 
+---let, const ,var 
+
+--- * - var , let değiştirilebilir değişkenler  ---
+** var tanımladığımızda değişkeni değiştiremeyiz yani var myName ="ss"; bu kısım bir değişken olaraka tutulur myName="aa" aynı ismi kullanıdğımz kısım 
+-- kod olarak yazıldığında ikinci defa değşken atadığımız için ikinci değişken yazılır yani satır satır
+
+--- * - const  değiştirilimez değşkenler ---
+** bu ise ikinci değişkende bize eroro veriri çünkü bu değişken değiştirilemez
+///var myName = 'esila';
+//console.log(myName);
+
+
+//myName = "enes";
+//console.log(myName);
+
+
+// const yourName ="esra";
+// console.log(yourName);
+
+
+
+// yourName = "esin";
+// console.log(yourName)
+
+
+//let heName="ertuğrul";
+//console.log(heName);
+
+
+//heName="zeyd";
+//console.log(heName);
+
+--- * arrow function ---
+
+// const ile fonsksyon arasındaki var const bir değişken listesi alabilr funksyon ise tekdir
+// function myName(name){
+  // console.log(name)
+// }
+
+// myName("esila")
+
+// const yourName=(name)=>{
+  // console.log(name)
+// }
+
+// yourName("esin")
+
+
+** bu 'se const fonksyonunu kisaltilmi; kullani
+// const multply = number => number*2;
+
+// console.log(multply(4));
+
+
+---- * class *---
+/// classımızı kullanıdık ve klasın içinde functionlarımız çağırdık 
+
+
+class Person {
+  constructor(){
+    this.name = "max";
+  }
+  
+  printMyName(){
+    console.log(this.name);
+  }
+}
+
+
+const person = new Person();
+person.printMyName();
+-------------------------------------------------------------------- başkla bir clası extedn etme yani o klasda o extedn edilen classı kullanabilme---
+class Gender {
+  constructor(){
+    this.gender ="female"
+  }
+  printGender(){
+    console.log(this.gender);
+  }
+}
+
+
+
+class Person extends Gender {
+  constructor(){
+    super(); /// super bir method yukarıdaki clasımızn fonksyonlarını ve constraktırlarını kullanmemızı sağlar
+    this.name = "esila";
+  }
+  
+  printMyName(){
+    console.log(this.name);
+  }
+}
+
+
+const person =new Person();
+person.printMyName();
+person.printGender();
+
+
+-------- spread ve rest oparatörü (...) --------------
+
+
+
+const numbers =[1 ,1 ,2 ,3 ];
+const newNumber = [...numbers,4];
+
+
+console.log(newNumber)
+
+
+**********************************
+const person ={
+  name: 'esila'
+}
+
+const age = {
+  ...person,
+  age = 25
+}
+
+
+console.log(age);
+
+
+**************-rest 
+
+const filter = (...args)=>{
+  return args.filter(el=>el === 1);
+}
+
+
+console.log(filter(1,2,3));
+
+---* *-- **      arrar değişkenleri
+
+
+const numbers =[1,2,3];
+[num1,num2]=numbers;
+console.log(num1,num2);
+
+******************- -  - -- -referanslar
+
+
+const person ={
+  name: 'max'
+};
+
+const  secondPerson =person;
+person.name = 'menu';
+
+console.log(secondPerson)
+
+
+
+*********************** - map  yani arrar için tek tek gezdik ve fonksyona atamasını söyledik
+
+const numbers =[1,2,3];
+const double = numbers.map((num)=>{
+  return num*2;
+})
+
+console.log(numbers);
+console.log(double);
+-*-*-*
+
+Not really next-gen JavaScript, but also important: JavaScript array functions like map() , filter() , reduce()  etc.
+
+You'll see me use them quite a bit since a lot of React concepts rely on working with arrays (in immutable ways).
+
+The following page gives a good overview over the various methods you can use on the array prototype - feel free to click through them and refresh your knowledge as required: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+Particularly important in this course are:
+
+map()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+find()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+findIndex()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
+filter()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+reduce()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?v=b
+concat()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat?v=b
+slice()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+splice()  => https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
