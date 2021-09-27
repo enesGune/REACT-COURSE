@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Expenses from './components/Expenses';
+import Expenses from './components/Expenses/Expenses.js';
 
 // bu bizim ilk custom componentimiz
 function App() {
