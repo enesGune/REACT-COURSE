@@ -1,6 +1,6 @@
 import '../assets/style/componenst/Expenseltem.css';
 import ExpenseDate from '../components/ExpenseDate'
-
+import React from 'react';
 // aşağıdaki props ile appjs den gönderdiğimiz datayı kullandık bu sayede vertabanınında aynı yöntemde kullanabiliriz
 
 function ExpenseItem (props){
@@ -19,7 +19,7 @@ function ExpenseItem (props){
                     {props.title}
                 </h2>
                 <div className="expense-item__price">
-                    {props.amount}
+                    ${props.amount}
 
                 </div>
             </div>
