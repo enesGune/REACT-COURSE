@@ -1,4 +1,4 @@
-import 'D:/PROJE/react/GIT-COURSE/REACT-COURSE/react-complate-guide/src/assets/style/componenst/Expenseltem.css';
+import '../../assets/style/componenst/Expenseltem.css';
 import ExpenseDate from './ExpenseDate.js'
 import React from 'react';
 // aşağıdaki props ile appjs den gönderdiğimiz datayı kullandık bu sayede vertabanınında aynı yöntemde kullanabiliriz
