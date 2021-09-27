@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import Expenses from './components/Expenses/Expenses.js';
-
+import NewExpense from './components/NewExpense/NewExpense';
 // bu bizim ilk custom componentimiz
-function App() {
+const App = () => {
     // aşağıda bir fonksyon tanımladık ve sayfamızın içinmde bir p etiketi açmasını söyledik bu sayede 
     // daha sonrada etikete değişken tanımladık
     // ve root içine ekledik bu sayede sayfamızda oluşturduğumz etiket gözükğt
@@ -55,7 +55,7 @@ function App() {
  // );//
     return (
         <div>
-         <h2>Hello React First App</h2>
+         <NewExpense/>
             <Expenses items ={expenses}/>
 
         </div>

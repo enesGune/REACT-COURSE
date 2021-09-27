@@ -1,9 +1,9 @@
 import '../../assets/style/componenst/Expenseltem.css';
 import ExpenseDate from './ExpenseDate.js'
-import React from 'react';
+import React, {useState} from 'react';
 // aşağıdaki props ile appjs den gönderdiğimiz datayı kullandık bu sayede vertabanınında aynı yöntemde kullanabiliriz
 
-function ExpenseItem (props){
+const ExpenseItem = (props) => {
     //const expenseDate = new Date(2021,2,28);
     //const expenseTitle = 'car-expense';
     //const expenseAmount = 294.67;
@@ -11,19 +11,37 @@ function ExpenseItem (props){
     //const month =props.date.toLocaleString('en-US',{month:'long'});
     //const day =props.date.toLocaleString('en-US',{day:'2-digit'});
     //const year = props.date.getFullYear();
+    const [title, setTitle] =  useState(props.title);
+    
+
+    const clickHandler =()=>{
+        setTitle('updated');
+        
+        console.log(title);
+    }
+
+
+    const backHandler = () =>{
+        setTitle(props.title)
+    }
+
     return(
         <div className="expense-item">
            <ExpenseDate date={props.date} />
             <div className="expense-item__description">
                 <h2>
-                    {props.title}
+                    {title}
                 </h2>
                 <div className="expense-item__price">
                     ${props.amount}
 
                 </div>
             </div>
-            
+            <div className="btn-block" >
+                <button onClick={clickHandler} >click</button>
+                <button onClick={backHandler} >back</button>
+            </div>
+           
         </div>
         
     )
