@@ -1,9 +1,15 @@
 import ExpensesFilter from "./ExpenseFilter";
 import ExpenseItem from "./Expenseltem";
+import React, {useState} from 'react';
 
 
-function Expenses(props){
+const Expenses = (props)=>{
 
+    const [filteredYear, setFilteredYear] = useState('2020');
+
+    const filterChanceHandler = selectedYear =>{
+        setFilteredYear(selectedYear)
+    }
     
 
     return(
@@ -11,7 +17,7 @@ function Expenses(props){
             
         
             <div className="expenses" >
-                <ExpensesFilter/>
+                <ExpensesFilter selected={filteredYear} onChangeFilter={filterChanceHandler} />
                 <ExpenseItem title={props.items[0].title} amount={props.items[0].amount} date={props.items[0].date} />
                 <ExpenseItem title={props.items[1].title} amount={props.items[1].amount} date={props.items[1].date} />
                 <ExpenseItem title={props.items[2].title} amount={props.items[2].amount} date={props.items[2].date} />
