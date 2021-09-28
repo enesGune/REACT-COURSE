@@ -3,11 +3,11 @@ import '../../assets/style/componenst/ExpenseForm.css'
 
 
 const ExpenseForm = (props) => {
-    const [enteredTitle, setEnteredTitle] = useState();
+    const [enteredTitle, setEnteredTitle] = useState('');
    
-    const [enteredAmount, setEnteredAmount] = useState();
+    const [enteredAmount, setEnteredAmount] = useState('');
 
-    const [enteredDate, setEnteredDate] = useState();
+    const [enteredDate, setEnteredDate] = useState('');
 
     //const [userInput, setUserInput] = useState({
       //  enteredTitle:'',
