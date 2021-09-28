@@ -26,24 +26,25 @@ const ExpenseItem = (props) => {
     }
 
     return(
-        <div className="expense-item">
-           <ExpenseDate date={props.date} />
-            <div className="expense-item__description">
-                <h2>
-                    {props.title}
-                </h2>
-                <div className="expense-item__price">
-                    ${props.amount}
+        <li>
+            <div className="expense-item">
+            <ExpenseDate date={props.date} />
+                <div className="expense-item__description">
+                    <h2>
+                        {props.title}
+                    </h2>
+                    <div className="expense-item__price">
+                        ${props.amount}
 
+                    </div>
                 </div>
+                <div className="btn-block" >
+                    <button onClick={clickHandler} >click</button>
+                    <button onClick={backHandler} >back</button>
+                </div>
+            
             </div>
-            <div className="btn-block" >
-                <button onClick={clickHandler} >click</button>
-                <button onClick={backHandler} >back</button>
-            </div>
-           
-        </div>
-        
+        </li>
     )
 }
 

@@ -1,6 +1,7 @@
 import ExpensesFilter from "./ExpenseFilter";
-import ExpenseItem from "./Expenseltem";
+// import ExpenseItem from "./Expenseltem";
 import React, {useState} from 'react';
+import ExpenseList from "./ExpenseList";
 
 
 const Expenses = (props)=>{
@@ -10,7 +11,10 @@ const Expenses = (props)=>{
     const filterChanceHandler = selectedYear =>{
         setFilteredYear(selectedYear)
     }
-    
+    // aşağıda yıla göre listelemek için bir fonksyon yazdık
+    const filteredExpenses = props.items.filter(expense => {
+        return expense.date.getFullYear().toString() === filteredYear;
+    });
 
     return(
         <div>
@@ -18,7 +22,8 @@ const Expenses = (props)=>{
         
             <div className="expenses" >
                 <ExpensesFilter selected={filteredYear} onChangeFilter={filterChanceHandler} />
-                {props.items.map(expense => <ExpenseItem title={expense.title} amount={expense.amount} date={expense.date}  />)}
+                {/* {filteredExpenses.length === 0 ? <p>No Expenses Found!</p> : filteredExpenses.map((expense) => <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date}  />) } */}
+                <ExpenseList items={filteredExpenses} />
                 {/* <ExpenseItem title={props.items[0].title} amount={props.items[0].amount} date={props.items[0].date} />
                 <ExpenseItem title={props.items[1].title} amount={props.items[1].amount} date={props.items[1].date} />
                 <ExpenseItem title={props.items[2].title} amount={props.items[2].amount} date={props.items[2].date} />
