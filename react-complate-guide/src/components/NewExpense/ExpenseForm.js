@@ -24,7 +24,7 @@ const ExpenseForm = (props) => {
        // })
     }
 
-    const amountChange = event =>{
+    const amountChange = (event) =>{
         setEnteredAmount(event.target.value);
         //setUserInput({
           //  ...userInput,
@@ -32,7 +32,7 @@ const ExpenseForm = (props) => {
         //})
     };
 
-    const dateChange = event =>{
+    const dateChange = (event) =>{
        setEnteredDate(event.target.value);
        //setUserInput({
         //...userInput,

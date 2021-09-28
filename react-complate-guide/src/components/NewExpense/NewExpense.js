@@ -4,7 +4,7 @@ import ExpenseForm from './ExpenseForm';
 
 const NewExpense = (props) => {
     const saveExpenseDateHandler = (enteredExpenseData) => {
-        const expenseData ={
+        const expenseData = {
             ...enteredExpenseData,
             id: Math.random().toString()
 
