@@ -11,19 +11,18 @@ const ExpenseItem = (props) => {
     //const month =props.date.toLocaleString('en-US',{month:'long'});
     //const day =props.date.toLocaleString('en-US',{day:'2-digit'});
     //const year = props.date.getFullYear();
-    const [title, setTitle] =  useState(props.title);
+    const [id, setId] =  useState(props.id);
     
 
-    const clickHandler =()=>{
-        setTitle('updated');
+    const updateHandler =()=>{
+        setId('');
+        console.log(id)
         
-        console.log(title);
+       
     }
 
 
-    const backHandler = () =>{
-        setTitle(props.title)
-    }
+   
 
     return(
         <li>
@@ -39,8 +38,8 @@ const ExpenseItem = (props) => {
                     </div>
                 </div>
                 <div className="btn-block" >
-                    <button onClick={clickHandler} >click</button>
-                    <button onClick={backHandler} >back</button>
+                    <button onClick={updateHandler} >Update</button>
+                    
                 </div>
             
             </div>

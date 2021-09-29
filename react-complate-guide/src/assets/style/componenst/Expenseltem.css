@@ -9,9 +9,14 @@
     background-color: #4b4b4b;
 }
 
-.btn-block {
-    display: flex;
-    flex-direction: column;
+.btn-block button {
+    border: 1px solid #adadad;
+    background-color: rgb(255, 136, 0);
+    color: black;
+    width: 60px;
+    height: 45px;
+    margin: 0 0 0 30px;
+    border-radius: 5px;
 }
 
 .expense-item__description {
